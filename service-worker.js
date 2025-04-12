@@ -1,4 +1,4 @@
-/* Manifest version: 2N9gaCc7 */
+/* Manifest version: 1ltgMR8W */
 // Caution! Be sure you understand the caveats before publishing an application with
 // offline support. See https://aka.ms/blazor-offline-considerations
 
@@ -68,9 +68,10 @@ async function onActivate(event) {
 async function onFetch(event) {
     let cachedResponse = null;
     if (event.request.method === 'GET') {
-        // For all navigation requests, try to serve index.html from cache
+        // Handle navigation requests properly
         const shouldServeIndexHtml = event.request.mode === 'navigate';
 
+        // For GitHub Pages, use the correct base path
         const request = shouldServeIndexHtml ? new Request(`${base}index.html`) : event.request;
         const cache = await caches.open(cacheName);
         cachedResponse = await cache.match(request);

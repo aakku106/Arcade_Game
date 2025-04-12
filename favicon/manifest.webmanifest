@@ -1,21 +1,21 @@
 {
-  "name": "Arcade",
+  "name": "Arcade Game",
   "short_name": "Arcade",
   "id": "./",
-  "start_url": "./",
+  "start_url": "../",
   "display": "standalone",
-  "background_color": "#0c0427",
-  "theme_color": "#140202",
+  "background_color": "#ffffff",
+  "theme_color": "#03173d",
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "/web-app-manifest-192x192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/web-app-manifest-512x512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
