@@ -1,9 +1,9 @@
 {
   "mainAssemblyName": "Arcade",
   "resources": {
-    "hash": "sha256-ZN+gbHjnFTgKqxUwWP0eh7TAD9lpsRCrYpZOnAOPBsc=",
+    "hash": "sha256-hgOlWF6O5VTTwDr3rcLOAtnC3D9xSAIJtLVPudbNKuY=",
     "fingerprinting": {
-      "Arcade.9m6f7xxpwn.wasm": "Arcade.wasm",
+      "Arcade.dvezaij6z2.wasm": "Arcade.wasm",
       "Microsoft.AspNetCore.Components.pxektgekyp.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.j0tq07cjya.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
       "Microsoft.AspNetCore.Components.WebAssembly.d13yrm8kw4.wasm": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
@@ -62,7 +62,7 @@
       "System.Runtime.InteropServices.JavaScript.zp9u3yqbi4.wasm": "sha256-t5fC5E2r9YJ+puOWw7YuXXMwvd7LxeR0Zt16THexNM0="
     },
     "assembly": {
-      "Arcade.9m6f7xxpwn.wasm": "sha256-v1VhrGBxzP25lsEUmF3K76gxidAqBpmKtCMi7xc3TE4=",
+      "Arcade.dvezaij6z2.wasm": "sha256-CbjXxkmIi+ARBrHEAZICi1Iulh8CHaAPHoqeAsr5khI=",
       "Microsoft.AspNetCore.Components.pxektgekyp.wasm": "sha256-YxqqHwo/n4vgAIrnYw8yeaYhKqOnABRMdGU2i22wv9Y=",
       "Microsoft.AspNetCore.Components.Web.j0tq07cjya.wasm": "sha256-YxGrJG4+Gd09sGH2zzOUdU9vZ7NVOIszAh1ACNDN+uU=",
       "Microsoft.AspNetCore.Components.WebAssembly.d13yrm8kw4.wasm": "sha256-Hymk0fViavnVW/gMYu9JN650NQTS5P8zPntoNQH10Xw=",
