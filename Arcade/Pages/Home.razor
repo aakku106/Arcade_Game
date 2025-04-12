@@ -99,13 +99,13 @@
     {
         @if (level > 6 && level < 12)
         {
-            <audio autoplay hidden loop>
+            <audio autoplay hidden>
                 <source src="sounds/long2.mp3" type="audio/mp3" />
             </audio>
         }
         else
         {
-            <audio autoplay hidden loop>
+            <audio autoplay hidden>
                 <source src="sounds/long1.mp3" type="audio/mp3" />
             </audio>
         }
@@ -126,13 +126,13 @@
     {
         <button class=" gameBtn" @onclick="restart"
             style="background-color: rgba(214, 47, 86, 0.355);border: 5px double rgba(239, 12, 88, 0.919));
-                                                                                                                                                                                                                                                                                                        ">
+                                                                                                                                                                                                                                                                                                            ">
             RESTART
         </button>
         <hr>
         <button @onclick="next"
             style="background-color: rgba(47, 214, 55, 0.215);border: 5px double rgba(239, 12, 88, 0.919));
-                                                                                                                                                                                                                                                                                                        ">
+                                                                                                                                                                                                                                                                                                            ">
             NEXT LVL!!
         </button>
     }
