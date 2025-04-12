@@ -1,3 +1,5 @@
+# @format
+
 name: Deploy to GitHub Pages
 
 on:
@@ -38,5 +40,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages  # Target the gh-pages branch
-          folder: release/wwwroot  # Path to the built app
+          branch: gh-pages # Target the gh-pages branch
+          folder: release/wwwroot # Path to the built app
