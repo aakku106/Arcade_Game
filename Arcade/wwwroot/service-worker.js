@@ -18,7 +18,7 @@ async function onInstall(event) {
     const assetsRequests = self.assetsManifest.assets
         .filter(asset => offlineAssetsInclude.some(pattern => pattern.test(asset.url)))
         .filter(asset => !offlineAssetsExclude.some(pattern => pattern.test(asset.url)))
-        .map(asset => new Request(asset.url, { integrity: asset.hash, cache: 'no-cache' }));
+        .map(asset => new Request(asset.url, { cache: 'no-cache' })); // Remove integrity check
     
     // Also cache sound files that might not be in the asset manifest
     const soundFiles = [
@@ -34,7 +34,20 @@ async function onInstall(event) {
     // Combine all requests
     const allRequests = [...assetsRequests, ...soundRequests];
     
-    await caches.open(cacheName).then(cache => cache.addAll(allRequests));
+    // Use try-catch to handle any fetch errors
+    try {
+        const cache = await caches.open(cacheName);
+        // Cache each item individually to avoid one failure breaking everything
+        for (const request of allRequests) {
+            try {
+                await cache.add(request);
+            } catch (e) {
+                console.warn(`Failed to cache: ${request.url}`, e);
+            }
+        }
+    } catch (e) {
+        console.error('Service worker installation failed:', e);
+    }
 }
 
 async function onActivate(event) {
