@@ -13,46 +13,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Step 1: Checkout the repository
-      - uses: actions/checkout@v3 # Use v3 to include LFS files
-        with:
-          persist-credentials: true # Make sure credentials are available
+      - uses: actions/checkout@v2
 
       # Step 2: Setup .NET SDK (for Blazor app)
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: "9.0.x" # Make sure this version matches your project
 
-      # Step 3: Debug - List directory
-      - name: Debug - List directory
-        run: ls -la
-
-      # Step 4: Publish the Blazor Project
+      # Step 3: Publish the Blazor Project
       - name: Publish .NET Project
         run: dotnet publish Arcade/Arcade.csproj -c Release -o release --nologo
 
-      # Step 5: Debug - Check output directory
-      - name: Debug - Check output directory
-        run: ls -la release/wwwroot
-
-      # Step 6: Add .nojekyll file to prevent Jekyll processing
+      # Step 4: Add .nojekyll file to prevent Jekyll processing
       - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll
 
-      # Step 7: (Optional) Modify base tag in index.html (only if needed for subdirectory deployment)
-      # You can skip this if your app is at the root of GitHub Pages
+      # Step 5: Modify base tag in index.html for correct subdirectory deployment
       - name: Change base tag in index.html
         run: sed -i 's|<base href=".*" />|<base href="/Arcade_Game/" />|g' release/wwwroot/index.html
 
-      # Step 8: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git checkout --orphan gh-pages
-          git rm -rf .
-          cp -r release/wwwroot/* .
-          touch .nojekyll
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push -f origin gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages  # Target the gh-pages branch
+          folder: release/wwwroot  # Path to the built app
