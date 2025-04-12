@@ -13,17 +13,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Step 1: Checkout the repository
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3 # Use v3 to include LFS files
 
       # Step 2: Setup .NET SDK (for Blazor app)
       - name: Setup .NET
-        uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: "9.0.x" # Make sure this version matches your project
 
       # Step 3: Publish the Blazor Project
       - name: Publish .NET Project
-        run: dotnet publish SilentEar/SilentEar.csproj -c Release -o release --nologo
+        run: dotnet publish Arcade/Arcade.csproj -c Release -o release --nologo
 
       # Step 4: Add .nojekyll file to prevent Jekyll processing
       - name: Add .nojekyll file
