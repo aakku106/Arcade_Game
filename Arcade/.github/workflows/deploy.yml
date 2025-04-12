@@ -42,3 +42,4 @@ jobs:
         with:
           branch: gh-pages # Target the gh-pages branch
           folder: release/wwwroot # Path to the built app
+          token: ${{ secrets.GITHUB_TOKEN }} # Add this line
