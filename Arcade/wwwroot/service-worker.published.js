@@ -67,9 +67,10 @@ async function onActivate(event) {
 async function onFetch(event) {
     let cachedResponse = null;
     if (event.request.method === 'GET') {
-        // For all navigation requests, try to serve index.html from cache
+        // Handle navigation requests properly
         const shouldServeIndexHtml = event.request.mode === 'navigate';
 
+        // For GitHub Pages, use the correct base path
         const request = shouldServeIndexHtml ? new Request(`${base}index.html`) : event.request;
         const cache = await caches.open(cacheName);
         cachedResponse = await cache.match(request);

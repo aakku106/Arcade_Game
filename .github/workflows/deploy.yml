@@ -33,7 +33,14 @@ jobs:
       - name: Change base tag in index.html
         run: sed -i 's|<base href=".*" />|<base href="/Arcade_Game/" />|g' release/wwwroot/index.html
 
-      # Step 6: Deploy to GitHub Pages
+      # Step 6: Modify URLs in manifest for GitHub Pages
+      - name: Modify URLs in manifest for GitHub Pages
+        run: |
+          if [ -f release/wwwroot/manifest.json ]; then
+            sed -i 's|"start_url": "./"|"start_url": "./Arcade_Game/"|g' release/wwwroot/manifest.json
+          fi
+
+      # Step 7: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
