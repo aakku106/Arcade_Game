@@ -32,7 +32,7 @@ jobs:
       # Step 5: (Optional) Modify base tag in index.html (only if needed for subdirectory deployment)
       # You can skip this if your app is at the root of GitHub Pages
       - name: Change base tag in index.html
-        run: sed -i 's|<base href="\/" />|<base href="\/" />|g' release/wwwroot/index.html
+        run: sed -i 's|<base href=".*" />|<base href="/Arcade_Game/" />|g' release/wwwroot/index.html
 
       # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
