@@ -1,13 +1,13 @@
 self.assetsManifest = {
-  "version": "sPTfH0kF",
+  "version": "0HMWJFID",
   "assets": [
     {
       "hash": "sha256-2kVCa6aJNBaokkCo68EgAAsxYYI950bqqDCqbly1bUg=",
       "url": "Arcade.styles.css"
     },
     {
-      "hash": "sha256-35x3CO0KRX+zhWWtwrsA3H3TfROvS96Dzxm/1pH/ie8=",
-      "url": "_framework/Arcade.1k585g3ccp.wasm"
+      "hash": "sha256-2KNS3xFgcKHJZnjKZOnh5D7E/pQ2K6F9RQb/KiSGO7Y=",
+      "url": "_framework/Arcade.wi41vcyhcp.wasm"
     },
     {
       "hash": "sha256-YxGrJG4+Gd09sGH2zzOUdU9vZ7NVOIszAh1ACNDN+uU=",
@@ -134,7 +134,7 @@ self.assetsManifest = {
       "url": "_framework/System.Text.RegularExpressions.gjrc7fe0iy.wasm"
     },
     {
-      "hash": "sha256-fNzgQKziso86NmavjcvN+YkSkJFaP6/bSDxNA2LBGyo=",
+      "hash": "sha256-SHzZpPGPerZwCOHOAS4V3/qWls2EXvzr7j5GlIDH0Vs=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -202,7 +202,7 @@ self.assetsManifest = {
       "url": "favicon/web-app-manifest-512x512.png"
     },
     {
-      "hash": "sha256-1xUG0ju1lv/yyYXGY84KnsA7jNwn05nN+cW4Vx3u3Ys=",
+      "hash": "sha256-JTmSAB3w8KhXlLlyYJBU9eNuryVA8VQxpEi2/Aijg0c=",
       "url": "index.html"
     },
     {
