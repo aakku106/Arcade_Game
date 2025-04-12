@@ -1,13 +1,13 @@
 self.assetsManifest = {
-  "version": "vxjjTF52",
+  "version": "2N9gaCc7",
   "assets": [
     {
       "hash": "sha256-2kVCa6aJNBaokkCo68EgAAsxYYI950bqqDCqbly1bUg=",
       "url": "Arcade.styles.css"
     },
     {
-      "hash": "sha256-FRWFNCrBSZ9u+iYrb0kp+YhmtBIlCQx9pUF8cjatsZI=",
-      "url": "_framework/Arcade.9n9pkxafb7.wasm"
+      "hash": "sha256-yXzCG2okyYG5lIwl0myMyg34XID3lUefGBwa1F0bbso=",
+      "url": "_framework/Arcade.jpqkbdwe1s.wasm"
     },
     {
       "hash": "sha256-YxGrJG4+Gd09sGH2zzOUdU9vZ7NVOIszAh1ACNDN+uU=",
@@ -134,7 +134,7 @@ self.assetsManifest = {
       "url": "_framework/System.Text.RegularExpressions.gjrc7fe0iy.wasm"
     },
     {
-      "hash": "sha256-f7lUNdaSBMfD/eQsCfxOMcAeQvXMJlgM7IEoNVaiKPk=",
+      "hash": "sha256-dZW0dI+FUso6GN2b5nFtHti6tER0wNkOKQCvkv5ol6Q=",
       "url": "_framework/blazor.boot.json"
     },
     {
