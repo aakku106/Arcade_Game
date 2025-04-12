@@ -1,6 +1,7 @@
 {
   "name": "Arcade Game",
   "short_name": "Arcade",
+  "id": "/Arcade_Game/",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -28,5 +29,19 @@
     }
   ],
   "orientation": "portrait-primary",
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "screenshots/desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "screenshots/mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
 }
