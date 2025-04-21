@@ -119,7 +119,7 @@
     }
     @if (score < 5)
     {
-        <button class="gameBtn" @onclick="buttonClicked" @onmouseleave="mouseLeaved">
+        <button class="gameBtn" @onclick="buttonClicked">
             Click me
         </button>
     }
@@ -127,13 +127,13 @@
     {
         <button class=" gameBtn" @onclick="restart"
             style="background-color: rgba(214, 47, 86, 0.355);border: 5px double rgba(239, 12, 88, 0.919));
-                                                                                                                                                                                                                                                                                                                    ">
+                                                                                                                                                                                                                                                                                                                                                        ">
             RESTART
         </button>
         <hr>
         <button @onclick="next"
             style="background-color: rgba(47, 214, 55, 0.215);border: 5px double rgba(239, 12, 88, 0.919));
-                                                                                                                                                                                                                                                                                                                    ">
+                                                                                                                                                                                                                                                                                                                                                        ">
             NEXT LVL!!
         </button>
     }
@@ -198,41 +198,12 @@
         }
         StateHasChanged();
     }
-    @* private void buttonTouched()
-    {
-        score++;
-        clickSoundEnabled = true;
-        lvlUpSoundEnable = false;
-        lvlResetSoundEnable = false;
-        appX = rand.Next(5, 95);
-        appY = rand.Next(5, 95);
-        if (level == 5 && score == 1)
-        {
-            GameBoxHeight -= 10;
-            GameBoxWidth -= 10;
-        }
-        if (level > 6 && level < 10 && score == 1)
-        {
-            GameBoxHeight -= 8;
-            GameBoxWidth -= 10;
-        }
-        if (level > 10 && level < 15 && score == 1)
-        {
-            GameBoxHeight += 5;
-            GameBoxWidth -= 1;
-        }
-        StateHasChanged();
-    } *@
-    private void mouseLeaved()
-    {
-        clickSoundEnabled = false;
-        StateHasChanged();
-    }
+
     private void restart()
     {
         score = 0;
         lvlResetSoundEnable = true;
-        clickSoundEnabled = false;
+        clickSoundEnabled =
         lvlUpSoundEnable = false;
         StateHasChanged();
     }
@@ -241,7 +212,7 @@
         level = 1;
         score = 0;
         lvlResetSoundEnable = true;
-        clickSoundEnabled = false;
+        clickSoundEnabled =
         lvlUpSoundEnable = false;
         StateHasChanged();
     }
